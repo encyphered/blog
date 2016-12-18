@@ -1,0 +1,15 @@
+title: "cypher's notepad"
+description: "TIS : Today I Saljiled"
+email: encyphered@gmail.com
+tagline: logging.getLogger('sapjil')
+baseurl: /blog
+paginate: 1
+
+# Build settings
+markdown: kramdown
+gems:
+  - jekyll-paginate
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
