@@ -35,7 +35,7 @@ AWS 를 쓴다면 제일 먼저 생각할 수 있는 솔루션은 Beanstalk 일�
 이왕 파이썬을 썼으니 이것도 맞춰서 Fabric 쪽으로 굳혀갔다.
 
 그러나 코드의 배포 이외에도 uWSGI/nginx 도 필요하고 pyenv 등도 필요하고 하여튼 프로비저닝때문에 다시 고민.
-Chef/Ansiable 등을 이용한 구성부터, AMI를 아예 미리 구워버리는 것도 생각하다가 동료의 "Docker 는 어때요?" 라는 말에 급 선회.
+Chef/Ansiable 등을 이용한 구성부터, AMI를 아예 미리 구워버리는 것도 생각하다가 동료의 "Docker 는 어때요?" 라는 말에 급 선회.[^2]
 
 생각해보니 이미지를 통으로 빌드하고 그걸 배포하면 모든게 해결되네? 게다가 Java 컴포넌트는 AspectJ 로 (self invocation 등의 문제 때문에)
 LTW를 사용하게 구성할 생각이었는데, weaving agent 붙이는 문제도 같이 해결되니 일타쌍피.
@@ -56,7 +56,7 @@ ASG의 user data 에 넣어뒀다. 이 스크립트는 github repository 에 있
 
 그러니까,
 
-1. cloud-init 는 (user data로) S3 의 entrypoint 스크립트를 실행[^2]  
+1. cloud-init 는 (user data로) S3 의 entrypoint 스크립트를 실행[^3]
 2. S3 의 entrypoint 스크립트는 github 의 initialization 스크립트를 실행
 3. initialization 스크립트는 github 의 서버 설정 repository 를 체크아웃하고 docker-compose 를 실행
 
@@ -122,5 +122,8 @@ ps.
     업스트림 반영 및 릴리즈가 한참 늦어져서 따로 포크해서 썼었다.
 
 [^2]:
+    그러나 fabric 은 아직도 단순 설정파일 reload 등 여러 목적으로 사용중이다.
+
+[^3]:
     Launch configuration 의 user data 는 수정이 불가능한지라 인증 등이 변경될 수 있는 github 에서 뭔가를 직접 받아오기보다는
     IAM Profile 만으로 접근이 가능한 S3에 entrypoint 스크립트를 따로 올려두고 얘가 github 에 있는 실제 스크립트를 실행하도록 했다.
