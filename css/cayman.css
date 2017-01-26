@@ -15,6 +15,10 @@ a {
   a:hover {
     text-decoration: underline; }
 
+em {
+  font-style: normal;
+  font-weight: bold;
+}
 .btn {
   display: inline-block;
   margin-bottom: 1rem;
@@ -102,8 +106,7 @@ a {
     .main-content {
       max-width: 64rem;
       padding: 2rem 6rem;
-      margin: 0 auto;
-      font-size: 1.1rem; } }
+      margin: 0 auto; } }
   @media screen and (min-width: 42em) and (max-width: 64em) {
     .main-content {
       padding: 2rem 4rem;
@@ -124,6 +127,11 @@ a {
     margin-bottom: 1rem;
     font-weight: normal;
     color: #159957; }
+  .main-content h2 { font-size: 1.4em; }
+  .main-content h3 { font-size: 1.3em; }
+  .main-content h4 { font-size: 1.2em; }
+  .main-content h5 { font-size: 1.05em; }
+  .main-content h6 { font-size: 1.0em; }
   .main-content p {
     margin-bottom: 1em; }
   .main-content code {
@@ -222,7 +230,8 @@ a {
     background-color: #eff0f1;
     border: 0; }
   .main-content .footnotes {
-    border-top: solid 1px #eff0f1; }
+    border-top: solid 1px #eff0f1;
+    font-size: 0.8em; }
 
 .site-footer {
   padding-top: 2rem;
