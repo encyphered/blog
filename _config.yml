@@ -4,6 +4,7 @@ email: encyphered@gmail.com
 tagline: logging.getLogger('sapjil')
 baseurl: /blog
 paginate: 1
+google_analytics: "UA-31683453-1"
 
 # Build settings
 markdown: kramdown
