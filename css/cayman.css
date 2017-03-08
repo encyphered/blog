@@ -253,3 +253,11 @@ em {
 
 .site-footer-credits {
   color: #819198; }
+
+.main-content {
+  line-height: 180%; }
+
+.main-content li:first-child {
+  margin-top: 0.5em; }
+.main-content li p {
+  margin: 0; }
