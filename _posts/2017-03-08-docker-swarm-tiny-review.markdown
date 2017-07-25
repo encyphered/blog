@@ -2,7 +2,7 @@
 layout: post
 title: "Docker swarm mode 간략 소감"
 description: "겉핥기식 대충 swarm mode 간단 후기"
-categories: note
+categories: dev
 ---
 
 AWS 인프라를 셋업하면서 Docker 로 배포시스템 구성을 해두었지만, AWS 한국리전에는 ECS가 아직 없다보니
