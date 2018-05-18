@@ -1,0 +1,21 @@
+---
+layout: post
+title: "2018-05-18 Bookmarks"
+description: "2018-05-18 Bookmarks"
+categories: dev
+---
+
+열어두고 나중에 봐야지 했던 탭들이 짬되어가는지라 개요만 대충 일단 아카이빙.
+
+* [Docker Pattern: The Build Container](https://medium.com/@alexeiled/docker-pattern-the-build-container-b0d0e86ad601)  
+  자주 쓰던 방식인데, Build container pattern 이라는 거창한(?) 이름이 붙어있다는 사실을 처음 알았음
+* [Creating multiple images from a single Dockerfile](https://adilsoncarvalho.com/creating-multiple-images-from-a-single-dockerfile-3f69254b6137)  
+  Multi stage build 가 도입된지는 꽤 되었지만, base - deps - test - release 의 스텝별 chaining build 는 좋은 아이디어인듯
+* [State of Java](http://www.baeldung.com/java-in-2018)
+  아직은 Java 8, Spring 4, Spring Boot 1.5, Maven(!) 의 시대
+* [REST 기반의 간단한 분산 트랜잭션 구현 - 1편](https://www.popit.kr/rest-%EA%B8%B0%EB%B0%98%EC%9D%98-%EA%B0%84%EB%8B%A8%ED%95%9C-%EB%B6%84%EC%82%B0-%ED%8A%B8%EB%9E%9C%EC%9E%AD%EC%85%98-%EA%B5%AC%ED%98%84-1%ED%8E%B8/)  
+  TCC(Try-Confirm/Cancel) 의 간략한 구현 설명
+* [BigList: a Scalable High-Performance List for Java](https://dzone.com/articles/biglist-scalable-high)  
+  힙 메모리상에 대용량의 데이터를 저장하기 위한 BigList 구현
+* [Let's code a TCP/IP stack, 1: Ethernet & ARP](http://www.saminiir.com/lets-code-tcp-ip-stack-1-ethernet-arp/)  
+  코드로 이해하는 TCP/IP
